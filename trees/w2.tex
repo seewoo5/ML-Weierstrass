@@ -1,0 +1,140 @@
+% Predict w2 using a2 and a3
+\begin{forest}
+    for tree={
+    forked edge,
+    child anchor=north,
+    for descendants={
+        {edge=->}
+    }
+    },
+    [{$a_{3} \le 0$}, draw,
+        [{$a_{3} \le -1$}, draw, label L=Y,
+            [{$a_{3} \le -2$}, draw, label L=Y,
+                [{$a_{3} \le -3$}, draw, label L=Y,
+                    [{$a_{2} \le 0$}, draw, label L=Y,
+                        [{$a_{2} \le -1$}, draw, label L=Y,
+                            [{$a_{2} \le -2$}, draw, label L=Y,
+                                [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                                [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                            ]
+                            [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                        [{$a_{2} \le 1$}, draw, label R=N,
+                            [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                            [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                    ]
+                    [{$a_{2} \le 0$}, draw, label R=N,
+                        [{$a_{2} \le -1$}, draw, label L=Y,
+                            [{$a_{2} \le -2$}, draw, label L=Y,
+                                [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                                [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                            ]
+                            [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                        [{$a_{2} \le 1$}, draw, label R=N,
+                            [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                            [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                    ]
+                ]
+                [{$a_{2} \le -1$}, draw, label R=N,
+                    [{$a_{2} \le -2$}, draw, label L=Y,
+                        [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                    ]
+                    [{$a_{2} \le 0$}, draw, label R=N,
+                        [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$a_{2} \le 1$}, draw, label R=N,
+                            [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                            [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                    ]
+                ]
+            ]
+            [{$a_{2} \le -1$}, draw, label R=N,
+                [{$a_{2} \le -2$}, draw, label L=Y,
+                    [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                    [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                ]
+                [{$a_{2} \le 0$}, draw, label R=N,
+                    [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                    [{$a_{2} \le 1$}, draw, label R=N,
+                        [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                    ]
+                ]
+            ]
+        ]
+        [{$a_{3} \le 1$}, draw, label R=N,
+            [{$a_{2} \le 0$}, draw, label L=Y,
+                [{$a_{2} \le -1$}, draw, label L=Y,
+                    [{$a_{2} \le -2$}, draw, label L=Y,
+                        [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                    ]
+                    [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                ]
+                [{$a_{2} \le 1$}, draw, label R=N,
+                    [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                    [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                ]
+            ]
+            [{$a_{3} \le 2$}, draw, label R=N,
+                [{$a_{2} \le -1$}, draw, label L=Y,
+                    [{$a_{2} \le -2$}, draw, label L=Y,
+                        [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                    ]
+                    [{$a_{2} \le 0$}, draw, label R=N,
+                        [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$a_{2} \le 1$}, draw, label R=N,
+                            [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                            [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                    ]
+                ]
+                [{$a_{2} \le -1$}, draw, label R=N,
+                    [{$a_{2} \le -2$}, draw, label L=Y,
+                        [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                    ]
+                    [{$a_{2} \le 0$}, draw, label R=N,
+                        [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                        [{$a_{2} \le 1$}, draw, label R=N,
+                            [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                            [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
+\end{forest}
+
+% Predict w2 using (a2 mod 2) and (a3 mod 3)
+\begin{forest}
+    for tree={
+    forked edge,
+    child anchor=north,
+    for descendants={
+        {edge=->}
+    }
+    },
+    [{$\overline{a}_3 = 0$}, draw,
+        [{$\overline{a}_2 = 0$}, draw, label L=Y,
+            [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+            [{$-1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+        ]
+        [{$\overline{a}_3 \le 1$}, draw, label R=N,
+            [{$\overline{a}_2 = 0$}, draw, label L=Y,
+                [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+            ]
+            [{$\overline{a}_2 = 0$}, draw, label R=N,
+                [{$-1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+                [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+            ]
+        ]
+    ]
+\end{forest}

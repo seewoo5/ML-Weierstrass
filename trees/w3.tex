@@ -1,0 +1,64 @@
+% Predict w3 using N, a2, and w2
+\begin{forest}
+    leaf/.style={
+    rectangle,
+    thick,
+    draw,
+    fill=gray!20,
+    tier=bottom
+    },
+    for tree={
+    forked edge,
+    child anchor=north,
+    draw,
+    for descendants={
+        {edge=->}
+    }
+    },
+    [{$\overline{N} = 0$}
+        [{$a_2 \le 0$}, label L=Y
+            [{$a_2 \le -1$}, label L=Y
+                [{$w_2 = -1$}, label L=Y
+                    [{$0$}, leaf, label L=Y]
+                    [{$w_2 \le 0$}, label R=N
+                        [{$1$}, leaf, label L=Y]
+                        [{$0$}, leaf, label R=N]
+                    ]
+                ]
+                [{$0$}, leaf, label R=N]
+            ]
+            [{$w_2 = -1$}, label R=N
+                [{$1$}, leaf, label L=Y]
+                [{$w_2 \le 0$}, label R=N
+                    [{$0$}, leaf, label L=Y]
+                    [{$1$}, leaf, label R=N]
+                ]
+            ]
+        ]
+        [{$a_2 \le 0$}, label R=N
+            [{$a_2 \le -1$}, label L=Y
+                [{$w_2 = -1$}, label L=Y
+                    [{$1$}, leaf, label L=Y]
+                    [{$w_2 \le 0$}, label R=N
+                    [{$a_2 = -2$}, label L=Y
+                        [{$1$}, leaf, label L=Y]
+                        [{$0$}, leaf, label R=N]
+                    ]
+                        [{$1$}, leaf, label R=N]
+                    ]
+                ]
+                [{$1$}, leaf, label R=N]
+            ]
+            [{$a_2 \le 1$}, label R=N
+            [{$w_2 = -1$}, label L=Y
+                [{$0$}, leaf, label L=Y]
+                [{$w_2 \le 0$}, label R=N
+                    [{$1$}, leaf, label L=Y]
+                    [{$0$}, leaf, label R=N]
+                ]
+            ]
+                [{$1$}, leaf, label R=N]
+            ]
+        ]
+    ]
+\end{forest}%
