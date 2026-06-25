@@ -1,0 +1,21 @@
+% Predict w1 using a2
+\begin{forest}
+for tree={
+    forked edge,
+    child anchor=north,
+    for descendants={edge=->}
+},
+[{$a_{2} \le 0$}, draw,
+    [{$a_2 \le -1$}, draw, label L=Y,
+        [{$a_2 = -2$}, draw, label L=Y,
+            [{$0$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+            [{$1$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+        ]
+        [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+    ]
+    [{$a_2 \le 1$}, draw, label R=N,
+        [{$1$}, rectangle, thick, draw, label L=Y, tier=bottom, fill=gray!20]
+        [{$0$}, rectangle, thick, draw, label R=N, tier=bottom, fill=gray!20]
+    ]
+]
+\end{forest}
