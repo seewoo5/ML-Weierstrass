@@ -27,7 +27,7 @@ Run `predict_weierstrass.ipynb` with Sage kernel.
 
 ## Verifying the predictors
 
-The minimal reduced Weierstrass coefficients $w_1, w_2, w_3$ (i.e. $a_1, a_2, a_3$, with $a_1, a_3 \in \{0, 1\}$ and $a_2 \in \{-1, 0, 1\}$) can be recovered from the Frobenius traces $a_2, a_3$ and the conductor $N$. Two scripts check this.
+The minimal reduced Weierstrass coefficients $w_1, w_2, w_3$ can be recovered from the Frobenius traces $a_2, a_3$ and the parity of conductor $N$. The following two checks verify this.
 
 ### `check_tree.py`
 
@@ -39,15 +39,16 @@ python3 check_tree.py
 
 Expected output: every coefficient matches on all 437226 rows (100% accuracy for `wa1`, both `wa2` variants, and `wa3`).
 
-### `check_formula.sage`
+### `check_formula.ipynb`
 
-Closed-form formulas (`compute_w1`, `compute_w2`, `compute_w3`) plus two checks:
+An executable Sage notebook containing the closed-form formulas (`compute_w1`, `compute_w2`, `compute_w3`) and three checks:
 
-- `prove_mod6()`: exhaustive proof over all $6^5$ Weierstrass models $[a_1, a_2, a_3, a_4, a_6]$ taken mod 6. For each nonsingular model Sage computes the ground truth ($a_2$, $a_3$, $N$, and the global minimal model) and compares it to the formulas.
-- `check_csv()`: extra sanity check against the dataset (skipped if absent).
+- Every stored Frobenius trace is independently validated. Each equation mod 2 or mod 3 is lifted to an elliptic curve over $\mathbb{Q}$; if the original integer coefficients are singular, the notebook adjusts $w_6$ by $\pm 2$ or $\pm 3$ without changing the reduction, then computes `E.ap(2)` or `E.ap(3)`.
+- The formulas are checked exhaustively on all 32 equations mod 2 and all 108 reduced equations mod 3 used in the proof.
+- `check_csv()` performs an extra row-by-row sanity check against `ec_data_N100000_ap1229.csv` when the dataset is present.
 
 ```
-sage check_formula.sage
+sage -n jupyter check_formula.ipynb
 ```
 
-Expected output: `0` mismatches over the 7691 nonsingular models mod 6, all 437226 dataset rows correct, and `OVERALL: PASS`.
+Select the SageMath 10.9 kernel and run all cells. Expected output: all 32 stored $a_2$ values and all 108 stored $a_3$ values pass the lift checks, every finite formula check passes, and all 437226 dataset rows pass the optional CSV check.
