@@ -52,3 +52,19 @@ sage -n jupyter check_formula.ipynb
 ```
 
 Select the SageMath 10.9 kernel and run all cells. Expected output: all 32 stored $a_2$ values and all 108 stored $a_3$ values pass the lift checks, every finite formula check passes, and all 437226 dataset rows pass the optional CSV check.
+
+
+### `weierstrass_dist.py`
+
+Compute distribution of Weierstrass coefficients $w_1, w_2, w_3$ in the downloaded dataset. 
+
+```
+python3 weierstrass_dist.py
+```
+
+Expected output:
+```
+w1 counts: 0: 219952 (50.3%), 1: 217274 (49.7%)
+w2 counts: -1: 154308 (35.3%), 0: 154994 (35.4%), 1: 127924 (29.3%)
+w3 counts: 0: 283609 (64.9%), 1: 153617 (35.1%)
+```
