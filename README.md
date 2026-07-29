@@ -1,5 +1,9 @@
 # Predicting Weierstrass coefficients of elliptic curves
 
+Accompanying code for the paper *Decision trees, Frobenius traces, and Weierstrass coefficients of elliptic curves* by Barinder S. Banwait, Xiaoyu Huang, Kyu-Hwan Lee, Seewoo Lee, Thomas Oliver, and Alexey Pozdnyakov.
+
+[![arXiv](https://img.shields.io/badge/arXiv-2607.24251-b31b1b.svg)](https://arxiv.org/abs/2607.24251)
+
 ## Install dependencies
 
 You need to install [Sage](https://www.sagemath.org/) first.
